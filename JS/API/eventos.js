@@ -37,10 +37,12 @@ $(document).ready(function (){
 			 var ha=$('#resHab').val();
 			 var di=$('#resDia').val();
 			 
-			 if((estaConectado(){
-				 var a; //subir los datos                                                                 
-				else
-				   guardarReserva(th,pr,ha,di);//guardar localmente
+			 if(estaConectado()){
+				 var a; //subir los                                                 
+			 }else{
+				guardarReserva(th,pr,ha,di);//guardar localmente
+			 }
+		 });
 	 }, false);
 });
 
