@@ -1,20 +1,16 @@
 //Servidor
-function enviarDatos (nom, mail, tel, foto){
-	
+function enviarRegistro(nombre,telefono,email,foto){
 	$.ajax({
-	
-	  type: "POST",
-	
-	  url: "http://www.igitsoft.com/pgtest.php",
-	
-	  data: "nom="+nom+"&mail="+mail+"&tel="+tel
-	
+		type: "POST",
+		url: "http://192.168.1.69/pgtest.php",
+		data: "nom="+nombre+"&tel="+telefono+"&ema="+email
 	}).done(function(msg){
-				if(msg==1){
-					subirFoto(foto);
+		alert(msg);
+		if(msg==1){
+			//Subir Foto
+			alert(msg);//uploadPhoto(foto,nombre);
 		}else{
-		    navigator.notification.alert("No se ha enviado lso datos correctamente",null,"Error en Servidor", "De acuerdo");
+			navigator.notification.alert("Los datos no fueron enviados correctamente", null, "Error de Registro", "Aceptar");
 		}
-	
 	});
 }
