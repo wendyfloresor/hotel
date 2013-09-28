@@ -51,6 +51,7 @@ $(document).ready(function (){
 	  //Leer Historial
 	  $('#page div[data-role=content] ul[data-role=listview]
 	  li:eq(1)').tap(function(){
+		  leerHistorial();
 	  });
 	 },false);
 });
