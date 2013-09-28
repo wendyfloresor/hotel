@@ -42,9 +42,11 @@ $(document).ready(function (){
 			 }else{
 				guardarReserva(th,pr,ha,di);//guardar localmente
 			 }
+			 guardarHistorial(th,pr,ha,di);
 		 });
+		 //Sincronizar Reservas
+		 document.addEventListener("online", function(){
+			 leerReservas();
 	 }, false);
+	 },false);
 });
-
-
-
