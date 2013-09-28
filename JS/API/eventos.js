@@ -48,5 +48,9 @@ $(document).ready(function (){
 		 document.addEventListener("online", function(){
 			 leerReservas();
 	 }, false);
+	  //Leer Historial
+	  $('#page div[data-role=content] ul[data-role=listview]
+	  li:eq(1)').tap(function(){
+	  });
 	 },false);
 });
